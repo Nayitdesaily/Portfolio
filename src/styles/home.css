@@ -1,0 +1,41 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.home div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100vw;
+    
+    box-shadow: 5px 5px 5px #0000ff64
+}
+
+.home h1{
+    font-weight: 600;
+    font-size: 5rem;
+    text-transform: uppercase;
+    transition:all .2s;
+}
+
+.home h1:hover {
+    transform: translateX(20px);
+}
+
+.firstname {
+    
+    transition: all .5s;
+}
+
+.home div h1 {
+    cursor: pointer;
+}
+

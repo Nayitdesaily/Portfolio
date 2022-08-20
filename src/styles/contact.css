@@ -1,0 +1,32 @@
+.contact {
+    position: fixed;
+    bottom: 1rem;
+    left: 1rem;
+    padding: 1rem;
+    transition: all .3s ease;
+    border-bottom: 1px solid black;
+    background-color: black;
+    cursor: pointer;
+    border-radius: .2rem;
+}
+
+.contact:hover {
+    border-radius: .2rem;
+    background-color: #00FF00;
+    letter-spacing: .1rem;
+    border: 1px solid black;
+    box-shadow: 4px 4px 2px #00FF00;
+    
+}
+
+.contact  a {
+    text-decoration: none;
+    color: white;
+}
+
+
+
+.contact  a:hover {
+    text-decoration: none;
+    color: white;
+}
