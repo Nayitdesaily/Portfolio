@@ -1,43 +1,87 @@
-.main-information {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: black;
+.about {
     color: white;
+    background-color: black;
+    height: 100vh;    
 }
 
-.main-information h3 {
-    letter-spacing: .5rem;
+.title {
     font-size: 3rem;
+    font-weight: 300;
+    letter-spacing: .5rem;
+    position: absolute;
+    width: 100vw;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    opacity: 0;
+}
+
+.information-sec1 {
+    position: absolute;
+    width: 60%;
+    height: 40%;
+    top: 60%;
+    transform: translateY(-50%);
+    left: 5%;
+    opacity: 0;
+}
+
+.information-sec1> h4 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 0.5rem;
+}
+.information-sec1 > p{
+    font-size: 2rem;
+}
+
+.information-sec2 {
+    font-size: 2rem;
+    border: 1px solid white;
+    width: 50%;
+    position: absolute;
+    top: 60%;
+    transform: translateY(-50%);
+    right: 5%;
+    opacity: 0;
+}
+.arrow-down {
+    position: absolute;
+    top: 90vh;
+    right: 50%;
+    font-size: 2rem;
+}
+
+.return {
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 2rem;
+    right: 95%;
+    background-color: white;
+    cursor: pointer;
+}
+
+.scroll-down {
+    position: absolute;
+    top: 500px;
+    right: 50%;
+    transform: translateX(50%);
+    letter-spacing: 1rem;
+    font-size: 2rem;
     font-weight: 400;
 }
 
-.about-me {
-    background-color: black;
-    height: 100vh;
+.guide {
+    position: absolute;
+    bottom:40%;
+    right: 50%;
+    transform: translate(50%,50%);
+    opacity: 0;
+    color: black;
+    font-size: 3.5rem;
     width: 100%;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.about-me div {
-    margin: 3rem;
-    width: 60%;
-}
-
-.about-me div > h4 {
-    font-size: 2rem;
-    text-transform: uppercase;
-    letter-spacing: .3rem;
-    font-weight: 600;
-}
-
-.principal-information-about-me {
-    font-size: 1.2rem;
-    line-height: 2.5rem;
-    margin-top: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    letter-spacing: .4rem;
 }

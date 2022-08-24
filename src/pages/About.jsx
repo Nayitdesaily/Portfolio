@@ -1,60 +1,141 @@
 import React, { useEffect } from 'react';
-import Return from '../components/Return';
 import gsap from 'gsap';
 import '../styles/about.css'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { scroll } from 'react-scroll'
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-
 const About = () => {
 
+
    useEffect(() => {
-      const tl = gsap.timeline()
-      const titlePage = document.querySelector(".title-page")
-      const principalInformation = document.querySelector(".principal-information-about-me")
-      const aboutTitle = document.querySelector(".about-title")
-      const returnCircle = document.querySelector('.first-circle')
-      
-      const tlScrollTrigger = gsap.timeline({
+
+      const tl = gsap.timeline({
          scrollTrigger: {
             trigger: '.about',
-            pin: true,
-            markers: true,
+            scrub: true,
             start: 'top top',
-            end: '100% 100%',
+            end: '+=8000',
+            pin: true
          }
       })
 
-      tl.fromTo(titlePage,
-         { opacity: 0, y: -100 },
-         { opacity: 1, y: 0, duration: 1.5})
 
-         .fromTo(returnCircle, 
-            {opacity:0, y: 100},
-            {opacity: 1, y:0, duration: 1})
+      gsap.fromTo('.scroll-down', { opacity: 0, x: '-100%' }, { opacity: 1, x: '50%', ease: "bounce.out", duration: 2 })
+
+      gsap.to('.arrow-down', {
+         scrollTrigger: {
+            trigger: '.about',
+            scrub: true,
+            pin: true,
+            start: 'top top',
+            end: '+=8000',
+         },
+         rotate: 180,
+         right: '2rem',
+         duration: 3,
+      })
+
+      gsap.to('.about', {
+         scrollTrigger: {
+            trigger: '.about',
+            scrub: true,
+            pin: true,
+            start: 'top top',
+            end: '+=8000',
+         },
+         backgroundColor: 'white',
+         color: 'black',
+         duration: 3
+      })
 
       
+
+      tl.to('.scroll-down', {
+         scale: 0,
+         duration: 3,
+      })
+
+      tl.to('.title', {
+         opacity: 1,
+         duration: 3,
+      })
+
+      tl.to('.return', {
+         right: '1rem',
+         borderRadius: 50,
+         backgroundColor: 'blue',
+         duration: 3
+      })
+
+      tl.to('.title', {
+         x: '-100%',
+         scale: 0,
+         opacity: 0,
+         duration: 3
+      })
+
+      tl.to('.arrow-down', {
+         rotate: 180,
+         duration: 3
+      })
+
+      tl.to('.information-sec1', {
+         opacity: 1,
+         top: '50%',
+         duration: 3,
+      })
+
+      tl.to('.information-sec1', {
+         scale: 0,
+         opacity: 0,
+         duration: 3,
+      })
+
+      tl.to('.information-sec2', {
+         opacity: 1,
+         top: '50%',
+         duration: 3,
+      })
+
+      tl.to('.information-sec2', {
+         scale: 0,
+         opacity: 0,
+         duration: 3,
+      })
+
+      tl.to('.guide', {
+         opacity: 1,
+         duration: 3,
+         bottom: '50%',
+         letterSpacing: 0
+      }) 
+
    }, [])
 
    return (
       <div className='about'>
-         <div className='main-information'>
-            <h3 className='title-page'>I am FrontEnd Developer</h3>
+         <h3 className='title'>I am FrontEnd Developer</h3>
+         <div className='information-sec1'>
+            <h4 className='about-title'>About</h4>
+            <p className='principal-information-about-me'>
+               I'm Mechanic Engineer and passionated about technology.<br />
+               I'm 24 years old from Chimbote, Perú.
+            </p>
          </div>
+         <p className='information-sec2'>
+            I am a frontend web developer with good communication skills.
+            I do love work in other people and keep learning about
+            this amazing and new world.
+         </p>
 
-         <div className='about-me'>
-            <div>
-               <h4 className='about-title'>About</h4>
-               <p className='principal-information-about-me'>
-                  Hello. I'm Nayit. I'm Mechanic Engineer and passionated <br />
-                  about technology. I specialize in building on software development <br />
-                  and website that give to the clients the journey they are seeking
-               </p>
-            </div>
-         </div>
-         <Return />
+         <FontAwesomeIcon icon={faArrowDown} className='arrow-down' />
+         <a href="/"><div className='return'></div></a>
+         <h4 className='scroll-down'>Scroll Down</h4>
+         <h4 className='guide'>Go home, click in the blue circle <br /> or <br /> Scroll up to repeat</h4>
       </div>
    );
 };
