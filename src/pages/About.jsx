@@ -39,21 +39,6 @@ const About = () => {
          duration: 3,
       })
 
-      gsap.to('.about', {
-         scrollTrigger: {
-            trigger: '.about',
-            scrub: true,
-            pin: true,
-            start: 'top top',
-            end: '+=8000',
-         },
-         backgroundColor: 'white',
-         color: 'black',
-         duration: 3
-      })
-
-      
-
       tl.to('.scroll-down', {
          scale: 0,
          duration: 3,
