@@ -1,0 +1,103 @@
+.skills {
+   height: 100vh;
+}
+
+.my-skills-letters {
+   font-size: 5rem;
+   letter-spacing: .4rem;
+   font-weight: 400;
+   text-transform: uppercase;
+   position: absolute;
+   width: 100vw;
+   top: 50%;
+   transform: translateY(-50%);
+   text-align: center;
+}
+
+.technology-svg {
+   font-size: 8rem;
+   position: absolute;
+   opacity: 0;
+   y: -20%;
+   rotate: 20deg;
+}
+
+.html-svg {
+   bottom: 65%;
+   left: 10%;
+   color: orangered;
+   transform: translateX(0%);
+}
+
+.css-svg {
+   bottom: 65%;
+   right: 50%;
+   color: blue;
+   transform: translateX(50%);
+}
+
+.js-svg {
+   bottom: 65%;
+   right: 10%;
+   color: yellow;
+   transform: translateX(0%);
+}
+
+.react-svg {
+   bottom: 40%;
+   left: 9%;
+   color: lightseagreen;
+   transform: translateX(0%);
+}
+
+
+.bootstrap-svg {
+   bottom: 40%;
+   right: 50%;
+   transform: translateX(50%);
+   color: purple;
+}
+
+.redux-svg {
+   width: 8rem;
+   position: absolute;
+   opacity: 0;
+   bottom: 40%;
+   right: 10%;
+   color: rgb(255, 31, 255);
+   transform: translateX(0%);
+}
+
+.git-svg {
+   bottom: 15%;
+   left: 9%;
+   color: rgb(173, 46, 0);
+   transform: translateX(0%);
+}
+
+.scroll-down {
+   font-size: 1rem;
+   position: absolute;
+   top: 85%;
+}
+
+.return {
+   width: 2rem;
+   height: 2rem;
+   background-color: blue;
+   border-radius: 50%;
+   position: absolute;
+   top: 2rem;
+   right: 2rem;
+}
+
+.link-home {
+   font-size: 2rem;
+   opacity: 0;
+   text-align: center;
+   width: 100vw;
+   top: 50%;
+   transform: translateY(-50%);
+   text-align: center;
+   position: absolute;
+}

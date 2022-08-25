@@ -1,10 +1,16 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
 import { Home, Social, About, Projects, Skills } from './pages/index'
 import './App.css'
-import Contact from './components/Contact'
-
+import { useEffect } from 'react'
+import gsap from 'gsap'
 
 function App() {
+
+  useEffect(() => {
+    gsap.fromTo('.contact', {opacity:0, y: '-50%'}, {opacity: 1, duration: 1, y: '0%'})
+    gsap.fromTo('.ancore-my-resume', {opacity:0}, {opacity: 1})
+
+  }, [])
 
   return (
     <HashRouter>
@@ -15,8 +21,10 @@ function App() {
         <Route path='/skills' element={ <Skills /> }/>
         <Route path='/social' element={ <Social /> }/>
       </Routes>
-      <Contact />
-    </HashRouter>
+      <div className='contact'>
+            <a href="" className='ancore-my-resume'>My Resume</a> 
+        </div>
+    </HashRouter> 
     
   )
 }
