@@ -1,7 +1,7 @@
 import { faBootstrap, faCss3, faGit, faHtml5, faJs, faReact } from '@fortawesome/free-brands-svg-icons';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../styles/skills.css'
 import reduxSvg from '../assets/redux-logo.svg'
 import gsap from 'gsap';
@@ -16,7 +16,7 @@ const Skills = () => {
       const tl = gsap.timeline()
       tl.fromTo('.my-skills-letters', { opacity: 0, y: '20%' }, { opacity: 1, duration: 1, y: 's0%' })
       tl.to('.my-skills-letters', { top: '2rem', scale: 0.5, ease: 'Circ.easeOut', duration: 1.5 })
-   
+
       const st = gsap.timeline({
          scrollTrigger: {
             trigger: '.skills',
@@ -78,28 +78,47 @@ const Skills = () => {
          },
          rotate: '180deg'
       })
-   }, [])
 
+   }, [])
 
    return (
       <div className='skills'>
          <h4 className='my-skills-letters'>My skills</h4>
-         <FontAwesomeIcon icon={faHtml5} className='html-svg technology-svg' />
-         <FontAwesomeIcon icon={faCss3} className='css-svg technology-svg' />
-         <FontAwesomeIcon icon={faJs} className='js-svg technology-svg' />
-         <FontAwesomeIcon icon={faReact} className='react-svg technology-svg' />
-         <FontAwesomeIcon icon={faBootstrap} className='bootstrap-svg technology-svg' />
-         <img src={reduxSvg} className='redux-svg technology-svg' />
-         <FontAwesomeIcon icon={faGit} className='git-svg technology-svg' />
+
+         <div className='html-svg technology-svg'>
+            <FontAwesomeIcon icon={faHtml5} /> <p>Html</p>
+         </div>
+
+         <div className='css-svg technology-svg'>
+            <FontAwesomeIcon icon={faCss3} /> <p>Html</p>
+         </div>
+
+         <div className='js-svg technology-svg'>
+            <FontAwesomeIcon icon={faJs} /> <p>Css</p>
+         </div>
+
+         <div className='react-svg technology-svg'>
+            <FontAwesomeIcon icon={faReact} /> <p>Reacr</p>
+         </div>
+
+         <div className='bootstrap-svg technology-svg'>
+            <FontAwesomeIcon icon={faBootstrap} /> <p>Bootstrap</p>
+         </div>
 
 
+         <div className='redux-svg technology-svg'>
+            <img src={reduxSvg} /> <p>Redux</p>
+         </div>
+
+
+         <div className='git-svg technology-svg'>
+            <FontAwesomeIcon icon={faGit} /> <p>Git</p>
+         </div>
 
          <h4 className='scroll-down'>Scroll Down</h4>
          <FontAwesomeIcon icon={faArrowDown} className='arrow-down' />
          <a href="/"><div className='return'></div></a>
-
          <p className='link-home'>Go home, click in the red circle <br />or <br />Scroll Up</p>
-
       </div>
    );
 };
