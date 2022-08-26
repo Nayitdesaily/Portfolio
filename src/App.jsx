@@ -36,7 +36,6 @@ function App() {
             <Route path='/about' element={<About />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/skills' element={<Skills />} />
-            <Route path='/social' element={<Social />} />
           </Routes>
           <div className='contact'>
             <a href="" className='ancore-my-resume'>My Resume</a>

@@ -62,7 +62,7 @@ const Home = () => {
                     className='secondname'
                     onMouseOver={() => (setSecondName("Projects"))}
                     onMouseOut={() => (setSecondName("Desaily"))}
-                    onClick={() => navigate('/about')}>{secondName}</h1>
+                    onClick={() => navigate('/projects')}>{secondName}</h1>
             </div>
         </div>
     );
