@@ -29,7 +29,7 @@
 
 /* Responsive Mobile */
 
-@media (max-width: 320px) {
+@media (max-width: 300px) {
     .home h1 {
         font-weight: 500;
         font-size: 1.5rem;
