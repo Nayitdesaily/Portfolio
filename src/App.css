@@ -46,7 +46,7 @@
     color: white;
 }
 
-@media (max-width: 320px) {
+@media (max-width: 350px) {
     .contact a {
         font-size: .5rem;
     }

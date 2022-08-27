@@ -1,5 +1,5 @@
 import { HashRouter, Routes, Route } from 'react-router-dom'
-import { Home, Social, About, Projects, Skills } from './pages/index'
+import { Home, About, Projects, Skills } from './pages/index'
 import './App.css'
 import { useEffect } from 'react'
 import gsap from 'gsap'
@@ -9,7 +9,6 @@ import CircleLoader from "react-spinners/CircleLoader";
 function App() {
 
   const [loading, setLoading] = useState(false)
-
 
   useEffect(() => {
     setLoading(true)

@@ -42,62 +42,27 @@ const Home = () => {
          { opacity: 0, y: '20px' }, { opacity: 1, duration: 0.6, y: '0px' })
    }, [secondName])
 
-   /* Responsive */
-
-   const responsiveMobile = () => {
-
-      
-
-         if (window.innerWidth < 320) {
-            return (
-               <div className='home' onClick={() => {
-                  (setWelcomePhrase('About')),
-                     (setFirstName('Skills')),
-                     (setSecondName('Projects'))
-               }}>
-                  <div className='container-presentation'>
-                     <h1
-                        className='presentation'
-                        onClick={() => navigate('/about')}>{welcomePhrase}</h1>
-                     <h1
-                        className='firstname'
-                        onClick={() => navigate('/skills')}>{firstName}</h1>
-                     <h1
-                        className='secondname'
-                        onClick={() => navigate('/projects')}>{secondName}</h1>
-                  </div>
-                  <h5 className='tap-content'>Tap anywhere to start</h5>
-               </div>
-            )
-
-         } else if (window.innerWidth > 320) {
-            return (
-               <div className='container-presentation'>
-                  <h1
-                     className='presentation'
-                     onMouseOver={() => (setWelcomePhrase("About"))}
-                     onMouseOut={() => (setWelcomePhrase("Hi, I'm"))}
-                     onClick={() => navigate('/about')}>{welcomePhrase}</h1>
-
-                  <h1
-                     className='firstname'
-                     onMouseOver={() => (setFirstName("Skills"))}
-                     onMouseOut={() => (setFirstName("Nayit"))}
-                     onClick={() => navigate('/skills')}>{firstName}</h1>
-
-                  <h1
-                     className='secondname'
-                     onMouseOver={() => (setSecondName("Projects"))}
-                     onMouseOut={() => (setSecondName("Desaily"))}
-                     onClick={() => navigate('/projects')}>{secondName}</h1>
-               </div>
-            )
-         }
-   }
-
    return (
       <div className='home'>
-         {responsiveMobile()}
+         <div className='container-presentation'>
+            <h1
+               className='presentation'
+               onMouseOver={() => (setWelcomePhrase("About"))}
+               onMouseOut={() => (setWelcomePhrase("Hi, I'm"))}
+               onClick={() => navigate('/about')}>{welcomePhrase}</h1>
+
+            <h1
+               className='firstname'
+               onMouseOver={() => (setFirstName("Skills"))}
+               onMouseOut={() => (setFirstName("Nayit"))}
+               onClick={() => navigate('/skills')}>{firstName}</h1>
+
+            <h1
+               className='secondname'
+               onMouseOver={() => (setSecondName("Projects"))}
+               onMouseOut={() => (setSecondName("Desaily"))}
+               onClick={() => navigate('/projects')}>{secondName}</h1>
+         </div>
       </div >
    );
 };
