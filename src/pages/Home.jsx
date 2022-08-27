@@ -42,28 +42,58 @@ const Home = () => {
          { opacity: 0, y: '20px' }, { opacity: 1, duration: 0.6, y: '0px' })
    }, [secondName])
 
+   const onClickResponsive = () => {
+      
+         if (window.innerWidth <= 414) {
+            return (
+               <div className='home' onClick={() => {(setWelcomePhrase('About')), (setFirstName('Skills')), (setSecondName('Projects'))}}>
+                  <div className='container-presentation'>
+                     <h1
+                        className='presentation'
+                        onClick={() => navigate('/about')}>{welcomePhrase}</h1>
+
+                     <h1
+                        className='firstname'
+                        onClick={() => navigate('/skills')}>{firstName}</h1>
+
+                     <h1
+                        className='secondname'
+                        onClick={() => navigate('/projects')}>{secondName}</h1>
+                  </div>
+               </div >
+            )
+         } else if(window.innerWidth >= 415){
+            return (
+               <div className='home'>
+                  <div className='container-presentation'>
+                     <h1
+                        className='presentation'
+                        onMouseOver={() => (setWelcomePhrase("About"))}
+                        onMouseOut={() => (setWelcomePhrase("Hi, I'm"))}
+                        onClick={() => navigate('/about')}>{welcomePhrase}</h1>
+
+                     <h1
+                        className='firstname'
+                        onMouseOver={() => (setFirstName("Skills"))}
+                        onMouseOut={() => (setFirstName("Nayit"))}
+                        onClick={() => navigate('/skills')}>{firstName}</h1>
+
+                     <h1
+                        className='secondname'
+                        onMouseOver={() => (setSecondName("Projects"))}
+                        onMouseOut={() => (setSecondName("Desaily"))}
+                        onClick={() => navigate('/projects')}>{secondName}</h1>
+                  </div>
+               </div >
+            )
+         }      
+   }
+
    return (
-      <div className='home'>
-         <div className='container-presentation'>
-            <h1
-               className='presentation'
-               onMouseOver={() => (setWelcomePhrase("About"))}
-               onMouseOut={() => (setWelcomePhrase("Hi, I'm"))}
-               onClick={() => navigate('/about')}>{welcomePhrase}</h1>
-
-            <h1
-               className='firstname'
-               onMouseOver={() => (setFirstName("Skills"))}
-               onMouseOut={() => (setFirstName("Nayit"))}
-               onClick={() => navigate('/skills')}>{firstName}</h1>
-
-            <h1
-               className='secondname'
-               onMouseOver={() => (setSecondName("Projects"))}
-               onMouseOut={() => (setSecondName("Desaily"))}
-               onClick={() => navigate('/projects')}>{secondName}</h1>
-         </div>
-      </div >
+      <>
+         {onClickResponsive()}
+         <h5 className='tap-content'>Tap anywhere to start</h5>
+      </>
    );
 };
 

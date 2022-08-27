@@ -27,6 +27,10 @@
     cursor: pointer;
 }
 
+.tap-content {
+    display: none;
+}
+
 /* Responsive Mobile */
 
 @media only screen and (max-width: 415px) {
