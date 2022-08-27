@@ -24,24 +24,26 @@ function App() {
   }, [])
 
   return (
-    <div className='App'>
-      {loading ? 
-      (
-      <CircleLoader size={50} color={"#000000"} loading={loading} speedMultiplier={1.5} className='loader'/>
-      ) : (
-        <HashRouter>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/projects' element={<Projects />} />
-            <Route path='/skills' element={<Skills />} />
-          </Routes>
-          <div className='contact'>
-            <a href="" className='ancore-my-resume'>My Resume</a>
+    <>
+      {loading ?
+        (
+          <CircleLoader size={50} color={"#000000"} loading={loading} speedMultiplier={1.5} className='loader' />
+        ) : (
+          <div className='App'>
+            <HashRouter>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/projects' element={<Projects />} />
+                <Route path='/skills' element={<Skills />} />
+              </Routes>
+              <div className='contact'>
+                <a href="" className='ancore-my-resume'>My Resume</a>
+              </div>
+            </HashRouter>
           </div>
-        </HashRouter>
-      )}
-    </div>
+        )}
+    </>
   )
 }
 
