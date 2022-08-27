@@ -89,3 +89,36 @@
 
 /* Responsive Mobile */
 
+@media only screen and (max-width: 415px) {
+   .scroll-down {
+      font-weight: 200;
+      letter-spacing: .1rem;
+   }
+
+   .title {
+      font-size: 1.5rem;
+      letter-spacing: .1rem;
+   }
+
+   .information-sec1>h4 {
+      font-size: 1.25rem;
+   }
+   
+   .information-sec1>p {
+      font-size: .75rem;
+      line-height: 1.25rem;
+   }
+
+   .information-sec2 {
+      font-size: .75rem;
+      line-height: 1.25rem;
+   }
+   
+   .arrow-down {
+      font-size: 1rem;
+   }
+
+   .guide {
+      font-size: 1rem;
+   }
+} 
