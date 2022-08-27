@@ -24,7 +24,7 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div className='App'>
       {loading ? 
       (
       <CircleLoader size={50} color={"#000000"} loading={loading} speedMultiplier={1.5} className='loader'/>
@@ -41,7 +41,7 @@ function App() {
           </div>
         </HashRouter>
       )}
-    </>
+    </div>
   )
 }
 
