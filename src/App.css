@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap');
+
 * {
     font-family: 'Roboto Mono', monospace;
     margin: 0;
@@ -44,3 +45,14 @@
     text-decoration: none;
     color: white;
 }
+
+@media (max-width: 320px) {
+    .contact a {
+        font-size: .5rem;
+    }
+
+    .contact {
+        padding: .5rem;
+        
+    }
+  }

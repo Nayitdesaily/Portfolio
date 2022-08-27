@@ -5,67 +5,101 @@ import gsap from 'gsap';
 
 const Home = () => {
 
-    const [welcomePhrase, setWelcomePhrase] = useState("Hi, I'm")
-    const [firstName, setFirstName] = useState("Nayit")
-    const [secondName, setSecondName] = useState("Desaily")
+   const [welcomePhrase, setWelcomePhrase] = useState("Hi, I'm")
+   const [firstName, setFirstName] = useState("Nayit")
+   const [secondName, setSecondName] = useState("Desaily")
 
-    const navigate = useNavigate()
+   const navigate = useNavigate()
 
+   useEffect(() => {
+      gsap.fromTo('.container-presentation',
+         { y: '20px' },
+         {
+            duration: 1, y: '0px',
+            boxShadow: ['blue 0px 0px 0px 2px inset',
+               'rgb(255, 255, 255) 10px -10px 0px -3px',
+               'rgb(255, 0, 0) 10px -10px', 'rgb(255, 255, 255) 20px -20px 0px -3px',
+               'rgb(255, 213, 0) 20px -20px', 'rgb(255, 255, 255) 30px -30px 0px -3px',
+               'rgb(0, 225, 255) 30px -30px',
+               'rgb(255, 255, 255) 40px -40px 0px -3px',
+               'rgb(0, 0, 0) 40px -40px']
+         })
+   }, [])
 
-    useEffect(() => {
-        gsap.fromTo('.container-presentation',
-            { y: '20px' },
-            {
-                duration: 1, y: '0px',
-                boxShadow: ['blue 0px 0px 0px 2px inset',
-                    'rgb(255, 255, 255) 10px -10px 0px -3px',
-                    'rgb(255, 0, 0) 10px -10px', 'rgb(255, 255, 255) 20px -20px 0px -3px',
-                    'rgb(255, 213, 0) 20px -20px', 'rgb(255, 255, 255) 30px -30px 0px -3px',
-                    'rgb(0, 225, 255) 30px -30px',
-                    'rgb(255, 255, 255) 40px -40px 0px -3px',
-                    'rgb(0, 0, 0) 40px -40px']
-            })
-    }, [])
+   useEffect(() => {
+      gsap.fromTo('.presentation',
+         { opacity: 0, y: '20px' },
+         { opacity: 1, duration: 0.6, y: '0px', })
+   }, [welcomePhrase])
 
-    useEffect(() => {
-        gsap.fromTo('.presentation',
-            { opacity: 0, y: '20px' },
-            { opacity: 1, duration: 0.6, y: '0px', })
-    }, [welcomePhrase])
+   useEffect(() => {
+      gsap.fromTo('.firstname',
+         { opacity: 0, y: '20px' }, { opacity: 1, duration: 0.6, y: '0px' })
+   }, [firstName])
 
-    useEffect(() => {
-        gsap.fromTo('.firstname',
-            { opacity: 0, y: '20px' }, { opacity: 1, duration: 0.6, y: '0px' })
-    }, [firstName])
+   useEffect(() => {
+      gsap.fromTo('.secondname',
+         { opacity: 0, y: '20px' }, { opacity: 1, duration: 0.6, y: '0px' })
+   }, [secondName])
 
-    useEffect(() => {
-        gsap.fromTo('.secondname',
-            { opacity: 0, y: '20px' }, { opacity: 1, duration: 0.6, y: '0px' })
-    }, [secondName])
+   /* Responsive */
 
-    return (
-        <div className='home'>
-            <div className='container-presentation'>
-                <h1
-                    className='presentation'
-                    onMouseOver={() => (setWelcomePhrase("About"))}
-                    onMouseOut={() => (setWelcomePhrase("Hi, I'm"))}
-                    onClick={() => navigate('/about')}>{welcomePhrase}</h1>
+   const responsiveMobile = () => {
 
-                <h1
-                    className='firstname'
-                    onMouseOver={() => (setFirstName("Skills"))}
-                    onMouseOut={() => (setFirstName("Nayit"))}
-                    onClick={() => navigate('/skills')}>{firstName}</h1>
+      
 
-                <h1
-                    className='secondname'
-                    onMouseOver={() => (setSecondName("Projects"))}
-                    onMouseOut={() => (setSecondName("Desaily"))}
-                    onClick={() => navigate('/projects')}>{secondName}</h1>
-            </div>
-        </div>
-    );
+         if (window.innerWidth < 320) {
+            return (
+               <div className='home' onClick={() => {
+                  (setWelcomePhrase('About')),
+                     (setFirstName('Skills')),
+                     (setSecondName('Projects'))
+               }}>
+                  <div className='container-presentation'>
+                     <h1
+                        className='presentation'
+                        onClick={() => navigate('/about')}>{welcomePhrase}</h1>
+                     <h1
+                        className='firstname'
+                        onClick={() => navigate('/skills')}>{firstName}</h1>
+                     <h1
+                        className='secondname'
+                        onClick={() => navigate('/projects')}>{secondName}</h1>
+                  </div>
+                  <h5 className='tap-content'>Tap anywhere to start</h5>
+               </div>
+            )
+
+         } else if (window.innerWidth > 320) {
+            return (
+               <div className='container-presentation'>
+                  <h1
+                     className='presentation'
+                     onMouseOver={() => (setWelcomePhrase("About"))}
+                     onMouseOut={() => (setWelcomePhrase("Hi, I'm"))}
+                     onClick={() => navigate('/about')}>{welcomePhrase}</h1>
+
+                  <h1
+                     className='firstname'
+                     onMouseOver={() => (setFirstName("Skills"))}
+                     onMouseOut={() => (setFirstName("Nayit"))}
+                     onClick={() => navigate('/skills')}>{firstName}</h1>
+
+                  <h1
+                     className='secondname'
+                     onMouseOver={() => (setSecondName("Projects"))}
+                     onMouseOut={() => (setSecondName("Desaily"))}
+                     onClick={() => navigate('/projects')}>{secondName}</h1>
+               </div>
+            )
+         }
+   }
+
+   return (
+      <div className='home'>
+         {responsiveMobile()}
+      </div >
+   );
 };
 
 export default Home;
