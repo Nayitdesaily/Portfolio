@@ -19,9 +19,9 @@
 
 .contact {
     position: fixed;
-    bottom: 1rem;
+    top: 1.5rem;
     left: 1rem;
-    padding: 1rem;
+    padding: .5rem;
     transition: all .3s ease;
     border-bottom: 1px solid green;
     background-color: transparent;
@@ -43,20 +43,18 @@
     color: green;
 }
 
-
-
 .contact  a:hover {
     text-decoration: none;
     color: white;
 }
 
-@media (max-width: 350px) {
+@media (max-width: 415px) {
     .contact a {
-        font-size: .5rem;
+        font-size: .75rem;
     }
 
     .contact {
-        padding: .5rem;
         
+        top: 1rem;
     }
   }

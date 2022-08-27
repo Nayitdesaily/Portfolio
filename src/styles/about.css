@@ -65,9 +65,9 @@
 
 .scroll-down {
    position: absolute;
-   top: 500px;
+   bottom: 1rem;
    right: 50%;
-   transform: translateX(50%);
+   transform: translate(50%);
    letter-spacing: 1rem;
    font-size: 2rem;
    font-weight: 400;
