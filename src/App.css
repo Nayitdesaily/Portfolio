@@ -58,3 +58,9 @@
         top: 1rem;
     }
   }
+
+  @media (hover: none){
+    .contact  a:hover {
+        color: inherit;
+    }
+}
