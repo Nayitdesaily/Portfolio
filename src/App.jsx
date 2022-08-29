@@ -5,6 +5,7 @@ import { useEffect } from 'react'
 import gsap from 'gsap'
 import { useState } from "react";
 import CircleLoader from "react-spinners/CircleLoader";
+import Resume from './assets/resume.pdf'
 
 function App() {
 
@@ -38,7 +39,8 @@ function App() {
                 <Route path='/skills' element={<Skills />} />
               </Routes>
               <div className='contact'>
-                <a href="" className='ancore-my-resume'>My Resume</a>
+                <a className='ancore-my-resume' href={Resume} target="_blank"
+                  type="application/pdf">My Resume</a>
               </div>
             </HashRouter>
           </div>

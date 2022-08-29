@@ -90,15 +90,15 @@ const Skills = () => {
          </div>
 
          <div className='css-svg technology-svg'>
-            <FontAwesomeIcon icon={faCss3} /> <p>Html</p>
+            <FontAwesomeIcon icon={faCss3} /> <p>CSS</p>
          </div>
 
          <div className='js-svg technology-svg'>
-            <FontAwesomeIcon icon={faJs} /> <p>Css</p>
+            <FontAwesomeIcon icon={faJs} /> <p>Javascript</p>
          </div>
 
          <div className='react-svg technology-svg'>
-            <FontAwesomeIcon icon={faReact} /> <p>Reacr</p>
+            <FontAwesomeIcon icon={faReact} /> <p>React</p>
          </div>
 
          <div className='bootstrap-svg technology-svg'>

@@ -35,7 +35,6 @@
     letter-spacing: .1rem;
     border: 1px solid black;
     box-shadow: 4px 4px 2px #00FF00;
-    
 }
 
 .contact  a {
@@ -51,10 +50,11 @@
 @media (max-width: 415px) {
     .contact a {
         font-size: .75rem;
+        color: black;
     }
 
     .contact {
-        
+        border: 1px solid black;
         top: 1rem;
     }
   }

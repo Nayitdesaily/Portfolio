@@ -22,13 +22,13 @@
    rotate: 20deg;
 }
 
-
 .technology-svg > p {
    font-size: 1rem;
    color: black;
    text-align: center;
    margin-top: -1.5rem;
 }
+
 .html-svg {
    bottom: 65%;
    left: 10%;
@@ -66,7 +66,6 @@
 }
 
 .redux-svg {
-   width: 8rem;
    position: absolute;
    opacity: 0;
    bottom: 40%;
@@ -111,4 +110,36 @@
    transform: translateY(-50%);
    text-align: center;
    position: absolute;
+}
+
+@media only screen and (max-width: 415px) {
+   .my-skills-letters {
+      font-size: 2rem;
+   }
+
+   .return {
+      top: 1rem;
+      right: 1rem;
+   }
+
+   .technology-svg {
+      font-size: 5rem;
+   }
+
+   .technology-svg > p {
+      font-size: .75rem;
+      margin-top: -1rem;
+   }
+
+   .css-svg > p {
+      margin-right: .75rem;
+   }
+
+   .redux-svg > img {
+      width: 4rem;
+   }
+
+   .link-home {
+      font-size: 1rem;
+   }
 }
