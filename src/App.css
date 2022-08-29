@@ -51,18 +51,18 @@
     .contact a {
         font-size: .75rem;
         color: black;
+        padding: .25rem;
     }
 
     .contact {
         border: 1px solid black;
         top: 1rem;
+        
     }
-  }
 
-  @media (hover: none){
     .contact  a:hover {
         color: inherit;
         background-color: inherit;
         
     }
-}
+  }
