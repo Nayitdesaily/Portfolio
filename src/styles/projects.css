@@ -1,0 +1,66 @@
+.project-page {
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.project-page > div {
+  display: grid;
+  grid-column: 2;
+  grid-row: 2;
+  grid-template-areas:
+    'title pokedex'
+    'crud weather';
+  gap: 1rem;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.project-page > div > h3 {
+  font-size: 2rem;
+  grid-area: title;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-project {
+  width: 15rem;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.pokedex-img {
+  grid-area: pokedex;
+}
+.pokedex-img > img {
+  border-radius: 0% 100% 100% 0% / 0% 100% 0% 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.weather-img {
+  grid-area: weather;
+}
+.weather-img > img {
+  border-radius: 100% 0% 100% 0% / 0% 0% 100% 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.crud-img {
+  grid-area: crud;
+}
+.crud-img > img {
+  border-radius: 100% 0% 0% 100% / 0% 100% 0% 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.project-page > div > a > img:hover {
+  border-radius: 0;
+}
