@@ -67,6 +67,12 @@ const Projects = () => {
           <img src={weather} className="image-project" />
         </a>
       </div>
+      <a href="/">
+        <div className="return-circle"></div>
+      </a>
+      <p className="link-home-title">
+        Go home, click in the red circle <br />
+      </p>
     </div>
   );
 };

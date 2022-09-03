@@ -42,7 +42,7 @@
 }
 .pokedex-img > img {
   border-radius: 0% 100% 100% 0% / 0% 100% 0% 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .weather-img {
@@ -50,7 +50,7 @@
 }
 .weather-img > img {
   border-radius: 100% 0% 100% 0% / 0% 0% 100% 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .crud-img {
@@ -58,9 +58,32 @@
 }
 .crud-img > img {
   border-radius: 100% 0% 0% 100% / 0% 100% 0% 100%;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-in-out;
 }
 
 .project-page > div > a > img:hover {
   border-radius: 0;
+}
+
+.return-circle {
+  width: 2rem;
+  height: 2rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: black;
+  transition: all 0.4s ease-in-out;
+}
+
+.return-circle:hover {
+  border-radius: 50%;
+  background-color: peru;
+}
+
+.link-home-title {
+  font-size: 1rem;
+  text-align: center;
+  width: 100vw;
+  bottom: 1.5rem;
+  position: absolute;
 }
