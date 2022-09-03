@@ -71,7 +71,7 @@ const Projects = () => {
         <div className="return-circle"></div>
       </a>
       <p className="link-home-title">
-        Go home, click in the red circle <br />
+        Go home, click in the black square <br />
       </p>
     </div>
   );
